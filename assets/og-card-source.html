@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: #0b0e14; color: #e4e7ee; position: relative;
+    font-family: "Inter", sans-serif;
+  }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(148,163,184,0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148,163,184,0.055) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse 90% 90% at 40% 45%, #000 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 40% 45%, #000 30%, transparent 100%);
+  }
+  .glow {
+    position: absolute; width: 700px; height: 700px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(226,162,74,0.16), transparent 65%);
+    top: -260px; right: -180px;
+  }
+  .glow2 {
+    position: absolute; width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(143,180,212,0.07), transparent 65%);
+    bottom: -240px; left: -140px;
+  }
+  .wrap { position: relative; height: 100%; padding: 64px 80px; display: flex; flex-direction: column; }
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 30px; color: #e2a24a; }
+  .logo span { color: #e4e7ee; }
+  .status {
+    display: flex; align-items: center; gap: 12px;
+    font-family: "JetBrains Mono", monospace; font-size: 19px; letter-spacing: 0.08em;
+    color: #e2a24a; border: 1px solid rgba(226,162,74,0.34);
+    background: rgba(226,162,74,0.12); border-radius: 999px; padding: 10px 24px;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; background: #e2a24a; box-shadow: 0 0 14px rgba(226,162,74,0.9); }
+  .mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .avail {
+    font-family: "JetBrains Mono", monospace; font-size: 21px; color: #9aa3b2; margin-bottom: 22px;
+  }
+  .avail b { color: #e2a24a; font-weight: 500; }
+  h1 {
+    font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 108px;
+    letter-spacing: -0.02em; line-height: 1; margin-bottom: 24px;
+  }
+  .role {
+    font-family: "JetBrains Mono", monospace; font-weight: 500; font-size: 37px;
+    color: #e2a24a; letter-spacing: 0.02em;
+  }
+  .bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(148,163,184,0.12); padding-top: 30px;
+  }
+  .stack { font-family: "JetBrains Mono", monospace; font-size: 22px; color: #9aa3b2; }
+  .stack i { font-style: normal; color: #656e7e; padding: 0 6px; }
+  .loc { font-family: "JetBrains Mono", monospace; font-size: 22px; color: #9aa3b2; display: flex; align-items: center; gap: 10px; }
+  .loc svg { flex-shrink: 0; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="glow"></div>
+  <div class="glow2"></div>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo">&lt;HA<span>/</span>&gt;</div>
+      <div class="status"><span class="dot"></span>OPERATIONAL</div>
+    </div>
+    <div class="mid">
+      <div class="avail">$ <b>svc/haider.backend</b> — 6+ years in production · 5K+ txns/day</div>
+      <h1>Haider Ali</h1>
+      <div class="role">Senior Backend Engineer</div>
+    </div>
+    <div class="bottom">
+      <div class="stack">python<i>·</i>django<i>·</i>fastapi<i>·</i>aws<i>·</i>llm systems</div>
+      <div class="loc">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e2a24a" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Riyadh, Saudi Arabia
+      </div>
+    </div>
+  </div>
+</body>
+</html>
