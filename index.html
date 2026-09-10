@@ -170,7 +170,7 @@
               <span class="stat-label">Years of Experience</span>
             </div>
             <div class="stat-card reveal delay-1">
-              <span class="stat-number" data-count="4">0</span>
+              <span class="stat-number" data-count="5">0</span>
               <span class="stat-label">Companies, Startup to Government</span>
             </div>
             <div class="stat-card reveal delay-2">
@@ -207,7 +207,7 @@
               <h3>Senior Software Engineer</h3>
               <p class="timeline-company">SITE, Saudi Information Technology Company · Riyadh, Saudi Arabia</p>
               <ul>
-                <li>Design and maintain backend services for a secure government correspondence platform processing 5K+ daily transactions.</li>
+                <li>Lead backend architecture for a secure correspondence platform serving Saudi government entities, defining service boundaries, API standards, and reliability patterns for intra- and inter-entity communication.</li>
                 <li>Build and optimise Django REST APIs with strict schema validation, versioning, rate limiting, and secure authentication.</li>
                 <li>Implemented role-based access control across multiple authorization tiers, with SOC 2 aligned audit logging and centralized aggregation via the ELK stack.</li>
                 <li>Developed asynchronous workflows with Celery and Redis for delivery tracking, retries, delay alerts, and background processing.</li>
@@ -223,7 +223,23 @@
           <article class="timeline-item reveal">
             <div class="timeline-marker"></div>
             <div class="timeline-card">
-              <div class="timeline-meta"><span class="timeline-date">May 2021 – Feb 2024</span></div>
+              <div class="timeline-meta"><span class="timeline-date">Oct 2023 – Feb 2024</span></div>
+              <h3>Senior Software Engineer</h3>
+              <p class="timeline-company">Arbisoft · Lahore, Pakistan</p>
+              <ul>
+                <li>Built a serverless orchestration layer on AWS Lambda for Insurify, a US insurtech platform, dispatching quote requests concurrently across insurance carriers and removing the dependence on sequential provider calls.</li>
+                <li>Integrated SOAP-based providers with varied schemas and state-specific requirements, maintaining coverage through test-driven development with Pytest and the Django test framework.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Python</span><span class="tag">AWS Lambda</span><span class="tag">Serverless</span><span class="tag">SOAP</span><span class="tag">Pytest</span><span class="tag">TDD</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span class="timeline-date">May 2021 – Aug 2023</span></div>
               <h3>Software Engineer, Backend</h3>
               <p class="timeline-company">Kavtech Solutions (Private) Ltd. · Lahore, Pakistan</p>
               <ul>
@@ -295,21 +311,23 @@
               <span class="project-badge genai">GenAI</span>
               <span class="project-date">2025 – 2026</span>
             </div>
-            <h3>LLM-Powered E-commerce Assistant</h3>
+            <h3>Multi-Tenant LLM Agent, E-commerce Operations</h3>
             <p>
-              Production-ready AI assistant integrated into an e-commerce platform for
-              customer-facing and internal workflows. Built a retrieval-augmented generation
+              Production AI agent serving multiple tenants on an e-commerce platform, for
+              customer-facing and internal workflows. A retrieval-augmented generation
               pipeline grounded in product catalogs, FAQs, and operational documentation,
-              with vector search for context, later migrated from FAISS to pgvector so retrieval
-              could persist and stay tenant-aware.
+              with a LangGraph agent on top that rewrites and classifies each query, then
+              routes it to either knowledge retrieval or a business action. Vector search
+              was migrated from FAISS to pgvector so retrieval could persist and stay
+              tenant-aware.
             </p>
             <ul class="project-points">
-              <li>Tool and function calling to securely trigger backend actions: order lookup, shipment tracking, inventory checks, and policy validation</li>
-              <li>Conversation state management across multi-turn interactions</li>
-              <li>Deployed on AWS with OpenRouter for LLM inference and auditable AI interactions</li>
+              <li>Tool and function calling to trigger backend actions such as order lookup, shipment tracking, inventory checks, and policy validation, constrained by structured inputs, application-level authorization, and tenant permissions</li>
+              <li>Explicit agent state, with multi-turn context managed separately from retrieval and tool execution so failures stay attributable</li>
+              <li>Flask service on AWS, with OpenRouter for inference, and every model call, tool call, and retrieval result logged so interactions can be audited and replayed</li>
             </ul>
             <div class="tag-row">
-              <span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">pgvector</span><span class="tag">Function Calling</span><span class="tag">AWS</span><span class="tag">OpenRouter</span>
+              <span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">pgvector</span><span class="tag">FAISS</span><span class="tag">Function Calling</span><span class="tag">Multi-Tenancy</span><span class="tag">Flask</span><span class="tag">AWS</span>
             </div>
           </article>
 
@@ -368,10 +386,10 @@
 
         <p class="case-intro reveal">
           A CV tells you what I did. This shows how I think. Below is the architecture of the
-          LLM-powered e-commerce assistant, and the reasoning behind the key decisions.
+          multi-tenant LLM agent, and the reasoning behind the key decisions.
         </p>
 
-        <div class="case-diagram reveal" role="img" aria-label="Architecture diagram: user request flows through a Django API layer into a RAG pipeline with FAISS vector search, then to an LLM via OpenRouter, which triggers audited tool calls into backend services before responding">
+        <div class="case-diagram reveal" role="img" aria-label="Architecture diagram: user request flows through a Flask API layer into a RAG pipeline with pgvector search, then to a LangGraph agent using an LLM via OpenRouter, which triggers audited, permission-checked tool calls into backend services before responding">
           <svg viewBox="0 0 960 420" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -391,19 +409,19 @@
 
             <!-- api -->
             <rect x="120" y="150" width="180" height="66" rx="10" fill="rgba(226,162,74,0.1)" stroke="#e2a24a" stroke-width="1.4"/>
-            <text x="210" y="176" fill="#e4e7ee" font-size="13" text-anchor="middle">Django API</text>
+            <text x="210" y="176" fill="#e4e7ee" font-size="13" text-anchor="middle">Flask API</text>
             <text x="210" y="194" fill="#9aa3b2" font-size="11" text-anchor="middle">auth · validation</text>
             <text x="210" y="208" fill="#9aa3b2" font-size="11" text-anchor="middle">conversation state</text>
 
             <!-- rag -->
             <rect x="390" y="150" width="190" height="66" rx="10" fill="rgba(226,162,74,0.1)" stroke="#e2a24a" stroke-width="1.4"/>
             <text x="485" y="176" fill="#e4e7ee" font-size="13" text-anchor="middle">RAG Pipeline</text>
-            <text x="485" y="194" fill="#9aa3b2" font-size="11" text-anchor="middle">embeddings · FAISS</text>
+            <text x="485" y="194" fill="#9aa3b2" font-size="11" text-anchor="middle">embeddings · pgvector</text>
             <text x="485" y="208" fill="#9aa3b2" font-size="11" text-anchor="middle">context assembly</text>
 
             <!-- llm -->
             <rect x="670" y="150" width="180" height="66" rx="10" fill="rgba(226,162,74,0.1)" stroke="#e2a24a" stroke-width="1.4"/>
-            <text x="760" y="176" fill="#e4e7ee" font-size="13" text-anchor="middle">LLM Inference</text>
+            <text x="760" y="176" fill="#e4e7ee" font-size="13" text-anchor="middle">LangGraph Agent</text>
             <text x="760" y="194" fill="#9aa3b2" font-size="11" text-anchor="middle">via OpenRouter</text>
             <text x="760" y="208" fill="#9aa3b2" font-size="11" text-anchor="middle">tool / function calls</text>
 
@@ -531,7 +549,7 @@
               <h3>GenAI &amp; LLM Systems</h3>
             </div>
             <div class="tag-row">
-              <span class="tag">RAG</span><span class="tag">Embeddings &amp; Vector Search</span><span class="tag">FAISS</span><span class="tag">pgvector</span><span class="tag">Tool &amp; Function Calling</span><span class="tag">Prompt Engineering</span><span class="tag">Agentic Workflows</span><span class="tag">Context Memory</span>
+              <span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">Embeddings &amp; Vector Search</span><span class="tag">FAISS</span><span class="tag">pgvector</span><span class="tag">Tool &amp; Function Calling</span><span class="tag">Prompt Engineering</span><span class="tag">Agentic Workflows</span><span class="tag">Context Memory</span>
             </div>
           </div>
 
