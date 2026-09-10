@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://haiderali136a.github.io/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Haider Ali — Senior Backend Engineer. Python, Django, FastAPI, AWS, LLM systems. Riyadh, Saudi Arabia." />
+  <meta property="og:image:alt" content="Haider Ali, Senior Backend Engineer. Python, Django, Flask, AWS, LLM systems. Riyadh, Saudi Arabia." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Haider Ali | Senior Backend Engineer" />
   <meta name="twitter:description" content="Python backend engineer specialising in distributed systems, event-driven architecture, data pipelines, and LLM-powered systems." />
@@ -37,7 +37,7 @@
       "https://github.com/haiderali136a",
       "https://linkedin.com/in/haider-ali-232215172"
     ],
-    "knowsAbout": ["Python", "Django", "FastAPI", "Distributed Systems", "Event-Driven Architecture", "AWS", "Retrieval-Augmented Generation", "LLM Systems"]
+    "knowsAbout": ["Python", "Django", "Flask", "Distributed Systems", "Event-Driven Architecture", "AWS", "Retrieval-Augmented Generation", "LLM Systems"]
   }
   </script>
 </head>
@@ -81,10 +81,12 @@
           <h1 class="reveal delay-1">Haider Ali</h1>
           <h2 class="hero-role reveal delay-2">Senior Backend Engineer</h2>
           <p class="hero-lead reveal delay-3">
-            I design and build Python backend systems that stay reliable under pressure:
-            distributed services, event-driven architectures, data pipelines, and
-            LLM-powered features, running in production for government platforms,
-            enterprises, and startups.
+            I build Python backend systems for places where failure is expensive: a
+            correspondence platform used by Saudi government entities, regulated
+            enterprise workflows, and LLM agents that act on real business data.
+            Coming from government systems, I treat AI output the way I treat any
+            other system action. Logged, permission-checked, and reviewable when
+            something goes wrong.
           </p>
           <div class="hero-cta reveal delay-4">
             <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -107,7 +109,7 @@
         </div>
 
         <div class="hero-visual reveal delay-3">
-          <div class="svc-card" role="img" aria-label="Service status readout: Senior Backend Engineer based in Riyadh, 6-plus years in production, currently handling 5,000-plus transactions per day at SITE, built on Python, Django, FastAPI, Celery, RabbitMQ, Redis, AWS, Azure and Docker. All systems nominal.">
+          <div class="svc-card" role="img" aria-label="Service status readout: Senior Backend Engineer based in Riyadh, 6-plus years in production, working on government, regulated and audited platforms, built on Python, Django, Flask, Celery, RabbitMQ, Redis, AWS, Azure and Docker. All systems nominal.">
             <div class="svc-head">
               <span class="svc-dot"></span>
               <span class="svc-name">svc/haider.backend</span>
@@ -117,8 +119,8 @@
               <div class="svc-row"><dt>role</dt><dd>Senior Backend Engineer</dd></div>
               <div class="svc-row"><dt>region</dt><dd>Riyadh, Saudi Arabia</dd></div>
               <div class="svc-row"><dt>uptime</dt><dd>6+ years in production</dd></div>
-              <div class="svc-row"><dt>throughput</dt><dd>5,000+ txns/day (SITE)</dd></div>
-              <div class="svc-row"><dt>runtime</dt><dd>python · django · fastapi</dd></div>
+              <div class="svc-row"><dt>domain</dt><dd>government · regulated · audited</dd></div>
+              <div class="svc-row"><dt>runtime</dt><dd>python · django · flask</dd></div>
               <div class="svc-row"><dt>scale</dt><dd>celery · rabbitmq · redis</dd></div>
               <div class="svc-row"><dt>infra</dt><dd>aws · azure · docker</dd></div>
             </dl>
@@ -149,10 +151,11 @@
               and production readiness in mind.
             </p>
             <p>
-              At <strong>SITE (Saudi Information Technology Company)</strong> I work on a
-              secure government correspondence platform that processes over 5,000
-              transactions daily, where I handle everything from role-based access control
-              and audit logging to asynchronous workflow design with Celery and Redis.
+              At <strong>SITE (Saudi Information Technology Company)</strong> I lead the
+              backend architecture for a secure correspondence platform used by Saudi
+              government entities. That means access control across four authorisation
+              tiers, audit logging aligned to SOC 2, and asynchronous workflow design with
+              Celery and Redis.
             </p>
             <p>
               I have delivered production systems in regulated environments handling
@@ -171,8 +174,8 @@
               <span class="stat-label">Companies, Startup to Government</span>
             </div>
             <div class="stat-card reveal delay-2">
-              <span class="stat-number" data-count="5">0</span><span class="stat-suffix">K+</span>
-              <span class="stat-label">Daily Transactions on Current Platform</span>
+              <span class="stat-number" data-count="70">0</span><span class="stat-suffix">%</span>
+              <span class="stat-label">Infrastructure Cost Reduction</span>
             </div>
             <div class="stat-card reveal delay-3">
               <span class="stat-number" data-count="95">0</span><span class="stat-suffix">%+</span>
@@ -297,7 +300,8 @@
               Production-ready AI assistant integrated into an e-commerce platform for
               customer-facing and internal workflows. Built a retrieval-augmented generation
               pipeline grounded in product catalogs, FAQs, and operational documentation,
-              with FAISS vector search for contextual retrieval.
+              with vector search for context, later migrated from FAISS to pgvector so retrieval
+              could persist and stay tenant-aware.
             </p>
             <ul class="project-points">
               <li>Tool and function calling to securely trigger backend actions: order lookup, shipment tracking, inventory checks, and policy validation</li>
@@ -305,7 +309,7 @@
               <li>Deployed on AWS with OpenRouter for LLM inference and auditable AI interactions</li>
             </ul>
             <div class="tag-row">
-              <span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">Function Calling</span><span class="tag">AWS</span><span class="tag">OpenRouter</span>
+              <span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">pgvector</span><span class="tag">Function Calling</span><span class="tag">AWS</span><span class="tag">OpenRouter</span>
             </div>
           </article>
 
@@ -464,7 +468,7 @@
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <h3>Built for the bad day</h3>
-            <p>I design for failure before it happens: retries, fault isolation, idempotent APIs, and monitoring. On my current platform that means 5K+ daily transactions with incidents resolved within defined SLAs.</p>
+            <p>I design for failure before it happens: retries, fault isolation, idempotent APIs, and monitoring. On my current platform that means on-call rotations, and incidents resolved inside defined SLAs.</p>
           </div>
           <div class="work-card reveal delay-1">
             <div class="work-icon">
@@ -507,7 +511,7 @@
               <h3>Backend &amp; APIs</h3>
             </div>
             <div class="tag-row">
-              <span class="tag">Python</span><span class="tag">Django</span><span class="tag">Django REST Framework</span><span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">REST API Design</span><span class="tag">API Versioning</span><span class="tag">Microservices</span>
+              <span class="tag">Python</span><span class="tag">Django</span><span class="tag">Django REST Framework</span><span class="tag">Flask</span><span class="tag">REST API Design</span><span class="tag">API Versioning</span><span class="tag">Microservices</span>
             </div>
           </div>
 
@@ -527,7 +531,7 @@
               <h3>GenAI &amp; LLM Systems</h3>
             </div>
             <div class="tag-row">
-              <span class="tag">RAG</span><span class="tag">Embeddings &amp; Vector Search</span><span class="tag">FAISS</span><span class="tag">Tool &amp; Function Calling</span><span class="tag">Prompt Engineering</span><span class="tag">Agentic Workflows</span><span class="tag">Context Memory</span>
+              <span class="tag">RAG</span><span class="tag">Embeddings &amp; Vector Search</span><span class="tag">FAISS</span><span class="tag">pgvector</span><span class="tag">Tool &amp; Function Calling</span><span class="tag">Prompt Engineering</span><span class="tag">Agentic Workflows</span><span class="tag">Context Memory</span>
             </div>
           </div>
 
@@ -537,7 +541,7 @@
               <h3>Data &amp; ETL</h3>
             </div>
             <div class="tag-row">
-              <span class="tag">PostgreSQL</span><span class="tag">MariaDB</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">ETL / ELT Pipelines</span><span class="tag">Data Validation</span><span class="tag">Apache Airflow</span><span class="tag">Scrapy</span>
+              <span class="tag">PostgreSQL</span><span class="tag">MariaDB</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">ETL / ELT Pipelines</span><span class="tag">Data Validation</span><span class="tag">Scrapy</span>
             </div>
           </div>
 
