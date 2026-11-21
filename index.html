@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20261010" />
+  <link rel="stylesheet" href="css/style.css?v=20261121" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -166,7 +166,9 @@
               I have delivered production systems in regulated environments handling
               sensitive data, approval workflows, and audit trails, and more recently I have
               been building LLM-powered systems: retrieval-augmented generation, embeddings
-              with vector search, and agentic tool-calling workflows deployed on AWS.
+              with vector search, and agentic tool-calling workflows deployed on AWS. I test
+              them the way I test backend code: traced runs, repeated evaluations against the
+              source data, and a fix whenever the model says something the data does not support.
             </p>
           </div>
           <div class="about-stats">
@@ -217,6 +219,7 @@
                 <li>Implemented role-based access control across multiple authorization tiers, with SOC 2 aligned audit logging and centralized aggregation via the ELK stack.</li>
                 <li>Developed asynchronous workflows with Celery and Redis for delivery tracking, retries, delay alerts, and background processing.</li>
                 <li>Integrated a secure Document Management System with versioning, encryption, and governed access to structured and unstructured data.</li>
+                <li>Reduced key dashboard query latency from about 15 seconds to 2-3 seconds through database indexing, query optimisation, and caching.</li>
                 <li>Support production operations through on-call rotations, incident troubleshooting within SLAs, and improved observability.</li>
               </ul>
               <div class="tag-row">
@@ -329,10 +332,11 @@
             <ul class="project-points">
               <li>Tool and function calling to trigger backend actions such as order lookup, shipment tracking, inventory checks, and policy validation, constrained by structured inputs, application-level authorization, and tenant permissions</li>
               <li>Explicit agent state, with multi-turn context managed separately from retrieval and tool execution so failures stay attributable</li>
-              <li>Flask service on AWS, with OpenRouter for inference, and every model call, tool call, and retrieval result logged so interactions can be audited and replayed</li>
+              <li>Flask service on AWS, with OpenRouter for inference, and every model call, tool call, and retrieval result traced in LangSmith so interactions can be audited and replayed</li>
+              <li>Evaluated the answer flow across repeated runs in a separate <a href="https://github.com/haiderali136a/store-assistant-lab" target="_blank" rel="noopener">open-source experiment</a>: structured checks passed answers that still added details the source never stated, fixed by rendering replies from verified fields</li>
             </ul>
             <div class="tag-row">
-              <span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">pgvector</span><span class="tag">FAISS</span><span class="tag">Function Calling</span><span class="tag">Multi-Tenancy</span><span class="tag">Flask</span><span class="tag">AWS</span>
+              <span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">LangSmith</span><span class="tag">LLM Evaluation</span><span class="tag">pgvector</span><span class="tag">FAISS</span><span class="tag">Function Calling</span><span class="tag">Multi-Tenancy</span><span class="tag">Flask</span><span class="tag">AWS</span>
             </div>
           </article>
 
@@ -554,7 +558,7 @@
               <h3>GenAI &amp; LLM Systems</h3>
             </div>
             <div class="tag-row">
-              <span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">Embeddings &amp; Vector Search</span><span class="tag">FAISS</span><span class="tag">pgvector</span><span class="tag">Tool &amp; Function Calling</span><span class="tag">Prompt Engineering</span><span class="tag">Agentic Workflows</span><span class="tag">Context Memory</span>
+              <span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">LangSmith</span><span class="tag">LLM Evaluation</span><span class="tag">Embeddings &amp; Vector Search</span><span class="tag">FAISS</span><span class="tag">pgvector</span><span class="tag">Tool &amp; Function Calling</span><span class="tag">Prompt Engineering</span><span class="tag">Agentic Workflows</span><span class="tag">Context Memory</span>
             </div>
           </div>
 
